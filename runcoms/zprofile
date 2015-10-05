@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -44,8 +44,26 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  $HOME/bin
+  $NPM_PACKAGES/bin:$PATH
+  $HOME/local/bin
+  $HOME/local/games
+  $HOME/.local/bin
+  /usr/lib/cw
+  /usr/local/bin
+  /home/kb/.gem/ruby/1.9.1/bin
+  /home/kb/.gem/ruby/2.0.0/bin
+  /home/kb/.gem/ruby/2.1.0/bin
   $path
 )
+
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 
 #
 # Less
@@ -72,3 +90,80 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#{{{ Variables
+#{{{ zsh
+    # directory to look for config files
+    export ZSH_CONFIG_DIR=$HOME/.zsh
+    export ZSH_CONFIG_DIR_LOCAL=$HOME/.zsh/local/$HOST
+#}}}
+#{{{ Java
+    # export JAVA_HOME=/opt/java6/jre
+    # export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+    # export JAVA_HOME=/usr/lib/jvm/java-7-openjdk/jre
+    export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+    export AWT_TOOLKIT="XToolkit"
+#}}}
+#{{{ editor / pager
+    export EDITOR=vim
+    # export HG="/usr/bin/vim"
+    # export EDITOR="/home/kb/local/bin/vim"
+    export VIMSESSION="/home/kb/.vim/sessions/"
+    # export PAGER="most"
+    export PAGER="less -R"
+#}}}
+#{{{ xterm / urxvt
+    # NOTE This is not read by xterm but an external script
+    export XTERM_FONT="Inconsolata";
+#}}}
+#{{{ nethack
+    # found this. liked it. geeky :) especially the 'gender:male,noautopickmeup' part...
+    # export NETHACKOPTIONS='gender:male,noautopickup,color,lit_corridor,showrace,showexp,showdmg,showweight,time,toptenwin,catname:Prowl,msg_window:f,!legacy'
+#}}}
+#{{{ local prefixes
+    # export CMAKE_INSTALL_PREFIX="/home/kb/local"
+    # export AWESOME_LIB="/home/kb/local/share/awesome/lib"
+#}}}
+#}}}
+#{{{ Paths
+#{{{ fpath
+    typeset -U fpath
+    fpath=( ~/.zsh/functions.d $fpath )
+#}}}
+#{{{perl
+    # export PERL5LIB=~/local/lib/perl5
+#}}}
+#{{{ Python
+    # typeset -U pythonpath
+    # pythonpath=( /code/python )
+    # export PYTHONPATH=/code/python:/usr/lib/python2.7:/usr/lib/python2.7/site-packages:$PYTHONPATH
+    # export JYTHONPATH=/opt/jython/Lib/:$JYTHONPATH:$PYTHONPATH
+#
+#}}}
+#{{{ JAVA
+    CLASSPATH=/usr/share/java/mysql-jdbc/mysql-connector-java-bin.jar:$CLASSPATH
+    CLASSPATH=/build/Jena-2.6.4/lib/jena-2.6.4.jar:$CLASSPATH
+    export CLASSPATH
+    export ECLIPSE_HOME=/usr/share/eclipse/
+#}}}
+#}}}
+#{{{ ... delegate
+#{{{ load local settings
+    [ -e ~/.zprofile.local ] && source $HOME/.zprofile.local
+#}}}
+#}}}
+# export ZSH_CONFIG_DIR=$HOME/.zsh
+export ZSH_CONFIG_DIR_LOCAL=$HOME/.zsh/local/$HOST
+
+export GITHUB_USER="kba"
+
+export TERM=xterm-256color
+
+# Less settings
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;40;30m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'

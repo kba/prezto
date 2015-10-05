@@ -88,6 +88,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Auto set to 'off' on dumb terminals.
 # zstyle ':prezto:module:prompt' theme 'steefkba'
 zstyle ':prezto:module:prompt' theme 'iggy'
+# zstyle ':prezto:module:prompt' theme 'garrett'
 
 #
 # Ruby
@@ -157,3 +158,9 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+#
+
+#
+# Completion
+#
+zstyle ':completion:*' accept-exact '*(N)'

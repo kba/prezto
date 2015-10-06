@@ -24,7 +24,7 @@
 	url = http://github.com/el1t/statusline
 [submodule "modules/prompt/external/zsh-prompt-iggy"]
 	path = modules/prompt/external/zsh-prompt-iggy
-	url = https://github.com/eugenk/zsh-prompt-iggy
+	url = https://github.com/kba/zsh-prompt-iggy
 [submodule "modules/editrc"]
 	path = modules/editrc
 	url = http://github.com/kba/prezto-editrc

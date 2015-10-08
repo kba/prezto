@@ -159,8 +159,9 @@ export ZSH_CONFIG_DIR_LOCAL=$HOME/.zsh/local/$HOST
 
 export GITHUB_USER="kba"
 
-# export TERM=xterm-256color
-export TERM=screen-256color
+if [[ "$TERM" = "xterm" || "$TERM" = "screen" ]]; then
+    export TERM=$TERM-256color
+fi 
 
 # Less settings
 export LESS_TERMCAP_mb=$'\E[01;31m'

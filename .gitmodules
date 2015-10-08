@@ -25,3 +25,6 @@
 [submodule "modules/editrc"]
 	path = modules/editrc
 	url = http://github.com/kba/prezto-editrc
+[submodule "modules/mkdir"]
+	path = modules/mkdir
+	url = https://github.com/kba/zsh-mkdir

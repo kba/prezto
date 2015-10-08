@@ -34,7 +34,11 @@ fi
 #
 
 # Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
+typeset -gU path cdpath fpath mailpath node_path
+
+# nodejs paths
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # Set the the list of directories that cd searches.
 # cdpath=(
@@ -45,7 +49,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   $HOME/bin
-  $NPM_PACKAGES/bin:$PATH
+  $NPM_PACKAGES/bin
   $HOME/local/bin
   $HOME/local/games
   $HOME/.local/bin
@@ -56,8 +60,6 @@ path=(
   /home/kb/.gem/ruby/2.1.0/bin
   $path
 )
-
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command

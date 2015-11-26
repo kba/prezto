@@ -1,30 +1,40 @@
 [submodule "modules/history-substring-search/external"]
 	path = modules/history-substring-search/external
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+    branch = master
 [submodule "modules/syntax-highlighting/external"]
 	path = modules/syntax-highlighting/external
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+    branch = master
 [submodule "modules/completion/external"]
 	path = modules/completion/external
 	url = https://github.com/zsh-users/zsh-completions.git
+    branch = master
 [submodule "modules/prompt/external/powerline"]
 	path = modules/prompt/external/powerline
 	url = https://github.com/davidjrice/prezto_powerline.git
+    branch = master
 [submodule "modules/prompt/external/agnoster"]
 	path = modules/prompt/external/agnoster
 	url = https://gist.github.com/3712874.git
+    branch = master
 [submodule "modules/prompt/functions/pure"]
 	path = modules/prompt/external/pure
 	url = https://github.com/sindresorhus/pure.git
+    branch = master
 [submodule "modules/prompt/external/statusline"]
 	path = modules/prompt/external/statusline
 	url = http://github.com/el1t/statusline
+    branch = master
 [submodule "modules/prompt/external/zsh-prompt-iggy"]
 	path = modules/prompt/external/zsh-prompt-iggy
 	url = https://github.com/kba/zsh-prompt-iggy
+    branch = master
 [submodule "modules/editrc"]
 	path = modules/editrc
 	url = http://github.com/kba/prezto-editrc
+    branch = master
 [submodule "modules/mkdir"]
 	path = modules/mkdir
 	url = https://github.com/kba/zsh-mkdir
+    branch = master

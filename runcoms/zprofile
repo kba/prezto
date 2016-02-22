@@ -129,8 +129,8 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 #}}}
 #{{{ Paths
 #{{{ fpath
-    typeset -U fpath
-    fpath=( ~/.zsh/functions.d $fpath )
+    # typeset -U fpath
+    # fpath=( ~/.zsh/functions.d $fpath )
 #}}}
 #{{{perl
     # export PERL5LIB=~/local/lib/perl5

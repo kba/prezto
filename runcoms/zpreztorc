@@ -92,8 +92,8 @@ zstyle ':prezto:module:git:info' status 'v1'
 # zstyle ':prezto:module:prompt' theme 'steefkba'
 default_user="xyz"
 # zstyle ':prezto:module:prompt' theme 'agnoster'
-zstyle ':prezto:module:prompt' theme 'paradox'
-# zstyle ':prezto:module:prompt' theme 'iggy'
+# zstyle ':prezto:module:prompt' theme 'paradox'
+zstyle ':prezto:module:prompt' theme 'iggy'
 # zstyle ':prezto:module:prompt' theme 'garrett'
 
 #

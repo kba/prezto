@@ -64,7 +64,7 @@ path=(
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+MANPATH="$NPM_PACKAGES/share/man:$HOME/.local/share/man:$(manpath)"
 
 
 #
@@ -158,6 +158,7 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export ZSH_CONFIG_DIR_LOCAL=$HOME/.zsh/local/$HOST
 
 export GITHUB_USER="kba"
+export GITLAB_USER="kba"
 
 if [[ "$TERM" = "xterm" || "$TERM" = "screen" ]]; then
     export TERM=$TERM-256color

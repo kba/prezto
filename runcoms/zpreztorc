@@ -52,7 +52,8 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:info' status 'v1'
 
 #
 # GNU Utility
@@ -90,7 +91,9 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Auto set to 'off' on dumb terminals.
 # zstyle ':prezto:module:prompt' theme 'steefkba'
 default_user="xyz"
-zstyle ':prezto:module:prompt' theme 'iggy'
+# zstyle ':prezto:module:prompt' theme 'agnoster'
+zstyle ':prezto:module:prompt' theme 'paradox'
+# zstyle ':prezto:module:prompt' theme 'iggy'
 # zstyle ':prezto:module:prompt' theme 'garrett'
 
 #

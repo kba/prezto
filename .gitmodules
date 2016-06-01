@@ -18,10 +18,6 @@
 	path = modules/prompt/external/agnoster
 	url = https://github.com/agnoster/agnoster-zsh-theme.git
     branch = master
-[submodule "modules/prompt/functions/pure"]
-	path = modules/prompt/external/pure
-	url = https://github.com/sindresorhus/pure.git
-    branch = master
 [submodule "modules/prompt/external/statusline"]
 	path = modules/prompt/external/statusline
 	url = http://github.com/el1t/statusline
@@ -38,3 +34,6 @@
 	path = modules/mkdir
 	url = https://github.com/kba/zsh-mkdir
     branch = master
+[submodule "modules/autosuggestions/external"]
+	path = modules/autosuggestions/external
+	url = https://github.com/tarruda/zsh-autosuggestions

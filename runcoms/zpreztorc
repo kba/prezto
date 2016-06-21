@@ -176,3 +176,5 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # Completion
 #
 zstyle ':completion:*' accept-exact '*(N)'
+
+zstyle ':prezto:environment:termcap' color 'no'
